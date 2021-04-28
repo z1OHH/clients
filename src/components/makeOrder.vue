@@ -140,7 +140,7 @@ export default {
     }
   },
   created(){
-        let apiURL = 'http://localhost:4000/api';
+        let apiURL = 'http://knwclothesb.app.ruk-com.cloud/api';
         axios.get(apiURL).then(res => {
             this.product = res.data
             console.log(this.product)
@@ -168,7 +168,7 @@ export default {
        for(let i = 0; i < this.product.length; i++){
           if (this.menu == this.product[i].name){
             this.product = this.product[i]
-             let apiURL = 'http://localhost:4000/api-history/create';
+             let apiURL = 'http://knwclothesb.app.ruk-com.cloud/api-history/create';
               await axios.post(apiURL, this.history).then(() => {
                 this.history = {
                     name: '',

@@ -74,7 +74,7 @@ export default {
   },
   methods: {
     handleDelete(id) {
-      let apiURL = `http://localhost:4000/api-history/delete/${id}`;
+      let apiURL = `http://knwclothesb.app.ruk-com.cloud/api-history/delete/${id}`;
             let indexOfArrayItem = this.histories.findIndex(i => i._id === id);
             if(window.confirm("Do you really want to delete?")){
                 axios.delete(apiURL).then(() => {
@@ -86,7 +86,7 @@ export default {
     }
   },
   created() {
-    let apiURL = "http://localhost:4000/api-history";
+    let apiURL = "http://knwclothesb.app.ruk-com.cloud/api-history";
     axios
       .get(apiURL)
       .then((res) => {
