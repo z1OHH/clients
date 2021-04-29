@@ -99,7 +99,7 @@
 
 
           
-          <button v-show="btn"  @click.prevent="handleSubmitForm" class="headerbutton" style="margin-top: 20px;padding: 15px 30px;font-size:20px;background-color:rgb(255, 255, 255);color: #000;">Make Order</button>
+          <button v-show="btn"  @click="handleSubmitForm" class="headerbutton" style="margin-top: 20px;padding: 15px 30px;font-size:20px;background-color:rgb(255, 255, 255);color: #000;">Make Order</button>
           
           <button v-show="btn1"   class="btn-not" style="cursor:not-allowed;margin-top: 55px;padding: 15px 30px;font-size:20px;">Make Order</button>
             
@@ -170,7 +170,7 @@ export default {
             this.product = this.product[i]
              let apiURL = 'http://knwclothesb.app.ruk-com.cloud/api-history/create';
               await axios.post(apiURL, this.history).then(() => {
-                window.location.reload();
+                this.$router.push('/');
                 this.history = {
                     name: '',
                     size: '',
