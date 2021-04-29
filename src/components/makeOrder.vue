@@ -170,6 +170,7 @@ export default {
             this.product = this.product[i]
              let apiURL = 'http://knwclothesb.app.ruk-com.cloud/api-history/create';
               await axios.post(apiURL, this.history).then(() => {
+                window.location.reload();
                 this.history = {
                     name: '',
                     size: '',
