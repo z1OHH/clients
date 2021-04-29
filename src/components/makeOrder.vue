@@ -183,7 +183,7 @@ export default {
             })
           }
        }
-       this.$router.go(this.$router.currentRoute)
+       //this.$router.go(this.$router.currentRoute)
     }
     
   },
